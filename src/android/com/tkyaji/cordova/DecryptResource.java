@@ -34,18 +34,18 @@ public class DecryptResource extends CordovaPlugin {
 
     private String launchUri;
 
-    @Override
-    public Uri remapUri(Uri uri) {
-        this.launchUri = uri.toString();
-        if (!this.launchUri.toString().startsWith(URL_PREFIX)) {
-            return uri;
-        }
-        return Uri.parse("cdvplugin://DecryptResource");
-    }
+    // @Override
+    // public Uri remapUri(Uri uri) {
+    //     this.launchUri = uri.toString();
+    //     if (!this.launchUri.toString().startsWith(URL_PREFIX)) {
+    //         return uri;
+    //     }
+    //     return Uri.parse("cdvplugin://DecryptResource");
+    // }
 
     @Override
     public CordovaResourceApi.OpenForReadResult handleOpenForRead(Uri uri) throws IOException {
-        String uriStr = this.tofileUri(this.launchUri);
+        String uriStr = this.tofileUri(uri);
         CordovaResourceApi.OpenForReadResult readResult =  this.webView.getResourceApi().openForRead(Uri.parse(uriStr), true);
 
         if (!isCryptFiles(uriStr)) {
