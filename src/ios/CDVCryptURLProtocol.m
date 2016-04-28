@@ -47,9 +47,6 @@ static NSString* const kCryptIv = @"";
 }
 
 + (BOOL)checkCryptFile:(NSURL *)url {
-    if (![url.scheme isEqual: @"file"]) {
-        return NO;
-    }
     NSString *extension = url.pathExtension;
     NSArray *extArray = @[@"jjj"];
     for (NSString* ext in extArray) {
