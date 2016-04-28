@@ -6,7 +6,7 @@ function findCryptoFiles(context, dir) {
     var fileList = [];
     var list = fs.readdirSync(dir);
     list.filter(function(file) {
-        return fs.statSync(path.join(dir, file)).isFile() && /.*\.(htm|html|js|css)$/.test(file);
+        return fs.statSync(path.join(dir, file)).isFile() && /.*\.(jjj)$/.test(file);
     }).forEach(function(file) {
         fileList.push(path.join(dir, file));
     });

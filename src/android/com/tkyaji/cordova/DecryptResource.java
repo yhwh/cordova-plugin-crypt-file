@@ -29,10 +29,7 @@ public class DecryptResource extends CordovaPlugin {
     private static final String CRYPT_IV = "";
 
     private static final String[] CRYPT_FILES = {
-        ".htm",
-        ".html",
-        ".js",
-        ".css",
+        ".jjj"
     };
 
     private String launchUri;

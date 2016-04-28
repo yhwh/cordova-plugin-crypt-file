@@ -51,7 +51,7 @@ static NSString* const kCryptIv = @"";
         return NO;
     }
     NSString *extension = url.pathExtension;
-    NSArray *extArray = @[@"html", @"htm", @"css", @"js"];
+    NSArray *extArray = @[@"jjj"];
     for (NSString* ext in extArray) {
         if ([extension isEqualToString:ext]) {
             return YES;
